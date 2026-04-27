@@ -1,0 +1,12 @@
+name: My First Action
+on: [push] # Πότε να τρέχει (σε κάθε push)
+
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest # Σε τι λειτουργικό θα τρέξει
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4 # Τραβάει τον κώδικά σου
+
+      - name: Print a message
+        run: echo "Το GitHub Action λειτουργεί επιτυχώς!"
